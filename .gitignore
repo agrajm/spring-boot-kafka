@@ -32,3 +32,6 @@ build/
 
 ## Spring Application Properties as it contains Endpoint Info
 application.yaml
+
+## Maven
+.mvn/
