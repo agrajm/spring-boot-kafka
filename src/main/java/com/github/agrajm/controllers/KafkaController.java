@@ -1,6 +1,7 @@
 package com.github.agrajm.controllers;
 
 import com.github.agrajm.kafka.Producer;
+import com.github.agrajm.models.SimpleMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +21,7 @@ public class KafkaController {
     }
 
     @PostMapping(value = "/publish")
-    public void sendMessageToKafkaTopic(@RequestParam("message") String message) {
+    public void sendMessageToKafkaTopic(@RequestParam("message") SimpleMessage message) {
         this.producer.send(message);
     }
 }
